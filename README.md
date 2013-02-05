@@ -10,12 +10,18 @@ My modified version of Garmin::FIT
 
 ## weight.pl
 
-Report the user's weight in kg from the Settings/*.FIT file.
+Report the user's weight in kg. Useful for ANT+ enabled scales (Tanita BC-1000, etc.)
 
-    perl weight.pl ~/Library/App*port/Garmin/Devices/*/Settings/*.FIT
+    weight.pl {settings.fit}
 
 ## linker.pl
 
 Match bikes with ANT+ sensors defined in the Settings FIT file to activities using those sensors.
 
-    perl linker.pl {settings.fit} activity.fit[, activity.fit]
+    linker.pl {settings.fit} activity.fit[, activity.fit]
+
+## powerstats.pl
+
+Print out power summary stats (AvgW, NP, VI, MaxW)
+
+    powerstats.pl activity.fit [activity.fit, ...]
